@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOS UNO | Propuesta Estratégica de Adquisición Q4 2026 - 2027</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#D97706',
+                            goldLight: '#F59E0B',
+                            dark: '#0B0F19',
+                            card: '#111827',
+                            border: '#1F2937',
+                            accent: '#0284C7',
+                            emerald: '#10B981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar and glass effects */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-amber {
+            box-shadow: 0 0 40px -10px rgba(217, 119, 6, 0.25);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: #ffffff !important; color: #000000 !important; }
+            .glass-panel { background: #f9fafb !important; border: 1px solid #e5e7eb !important; color: #111827 !important; }
+        }
+    </style>
+</head>
+<body class="bg-[#0B0F19] text-slate-200 antialiased font-sans min-h-screen selection:bg-amber-500/30 selection:text-amber-300">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 px-4 lg:px-8 py-3.5 transition-all duration-200">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            
+            <!-- Branding -->
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center font-display font-bold text-slate-950 text-xl shadow-lg shadow-amber-500/20 tracking-tighter">
+                    2:1
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-display font-bold text-white tracking-wider text-base lg:text-lg">DOS UNO</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30 font-medium">Arquitectura & Obra</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 hidden sm:block tracking-wide">Zapopan & ZMG · Estrategia Comercial</p>
+                </div>
+            </div>
+
+            <!-- Badges & Tools -->
+            <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+                <span class="hidden md:inline-flex items-center gap-1.5 text-xs bg-red-950/40 text-red-400 border border-red-800/40 px-3 py-1.5 rounded-full font-medium">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                    CONFIDENCIAL · JUNTA DIRECTIVA Q4 2026
+                </span>
+
+                <!-- Presentation Mode Toggle -->
+                <button id="fullscreenBtn" onclick="togglePresentationMode()" class="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs font-medium text-slate-200 hover:text-white transition flex items-center gap-1.5" title="Pantalla Completa">
+                    <i class="fa-solid fa-expand text-amber-400"></i>
+                    <span class="hidden sm:inline">Modo Presentación</span>
+                </button>
+
+                <!-- Print / Export -->
+                <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-xs font-semibold text-amber-300 hover:text-amber-200 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Exportar / Imprimir</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 lg:px-8 py-8 space-y-12">
+
+        <!-- HERO & DIAGNOSTIC SECTION -->
+        <section class="relative overflow-hidden rounded-3xl p-6 sm:p-8 lg:p-12 glass-panel border border-slate-800 glow-amber">
+            <!-- Background Decorative Grid -->
+            <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#d97706 1px, transparent 1px); background-size: 24px 24px;"></div>
+            
+            <div class="relative z-10 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-chart-line text-[10px]"></i> Plan de Choque Comercial Inmediato
+                </div>
+
+                <div class="max-w-4xl space-y-3">
+                    <h1 class="text-2xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+                        Adquisición de Clientes de <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-200">Alta Intención</span>
+                    </h1>
+                    <p class="text-base sm:text-xl text-slate-300 font-light leading-relaxed">
+                        Transición táctica: de la <span class="text-rose-400 line-through decoration-rose-500/60 decoration-2">Búsqueda pasiva por gustos</span> al <span class="text-amber-400 font-semibold underline decoration-amber-400/40 underline-offset-4">Rastreo de Huella Financiera y Legal</span> en Zapopan.
+                    </p>
+                </div>
+
+                <!-- Strategic Thesis Quote -->
+                <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border-l-4 border-amber-500 text-slate-300 text-sm sm:text-base italic leading-relaxed">
+                    <p>
+                        "Nuestro precio de <strong class="text-white font-semibold">$18,500 MXN/m² Llave en Mano</strong> es altamente competitivo en la ZMG. Sin embargo, los canales tradicionales en redes sociales están saturados y atraen prospectos sin terreno o sin liquidez inmediata. Para acelerar la captación este mes, iremos exactamente a donde el dinero ya se está moviendo."
+                    </p>
+                </div>
+
+                <!-- Key Metrics Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-4 border-t border-slate-800/80">
+                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <span class="text-xs text-slate-400 uppercase tracking-wider block font-medium">Precio Llave en Mano</span>
+                        <div class="text-xl sm:text-2xl font-bold font-display text-amber-400 mt-1">$18,500 <span class="text-xs text-slate-400 font-normal">MXN/m²</span></div>
+                        <span class="text-[11px] text-emerald-400 font-medium flex items-center gap-1 mt-0.5">
+                            <i class="fa-solid fa-lock text-[9px]"></i> Costo Fijo Garantizado
+                        </span>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <span class="text-xs text-slate-400 uppercase tracking-wider block font-medium">Ventana de Decisión</span>
+                        <div class="text-xl sm:text-2xl font-bold font-display text-white mt-1">48 - 90 <span class="text-xs text-slate-400 font-normal">Días</span></div>
+                        <span class="text-[11px] text-slate-400 font-medium">Desde trazo o crédito</span>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <span class="text-xs text-slate-400 uppercase tracking-wider block font-medium">SLA Broker Financiero</span>
+                        <div class="text-xl sm:text-2xl font-bold font-display text-sky-400 mt-1">48 <span class="text-xs text-slate-400 font-normal">Horas</span></div>
+                        <span class="text-[11px] text-sky-300/80 font-medium">Presupuesto paramétrico</span>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <span class="text-xs text-slate-400 uppercase tracking-wider block font-medium">Coto Target Primario</span>
+                        <div class="text-xl sm:text-2xl font-bold font-display text-white mt-1">Zapopan <span class="text-xs text-slate-400 font-normal">Norte / Real</span></div>
+                        <span class="text-[11px] text-slate-400">Capital Nte · Solares · La Cima</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW TOGGLE & FILTER BAR -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div>
+                <h2 class="text-xl font-bold text-white font-display flex items-center gap-2">
+                    <i class="fa-solid fa-chess-knight text-amber-500"></i>
+                    Las 4 Células de Ataque Comercial
+                </h2>
+                <p class="text-xs text-slate-400">Selecciona o filtra para examinar el despliegue operativo</p>
+            </div>
+
+            <!-- View Switchers -->
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+                <div class="inline-flex p-1 rounded-xl bg-slate-900 border border-slate-800 w-full sm:w-auto justify-center">
+                    <button id="viewGridBtn" onclick="switchView('grid')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition">
+                        <i class="fa-solid fa-grip mr-1"></i> Vista Ejecutiva
+                    </button>
+                    <button id="viewDetailedBtn" onclick="switchView('detailed')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition">
+                        <i class="fa-solid fa-list-check mr-1"></i> Vista Operativa 1-a-1
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 STRATEGIC ACTIONS (GRID VIEW) -->
+        <div id="actionsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-300">
+            
+            <!-- ACCIÓN 1 -->
+            <article class="glass-panel rounded-2xl p-6 border border-slate-800 hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl group-hover:scale-105 transition">
+                            <i class="fa-solid fa-landmark"></i>
+                        </div>
+                        <span class="text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded bg-slate-800 text-amber-400 border border-slate-700">
+                            ACCIÓN 1 · Rastro Legal
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition mb-2">
+                        Intercepción en Ventanilla Municipal
+                    </h3>
+                    
+                    <p class="text-xs font-medium text-slate-400 mb-4">
+                        Auditoría periódica de Dictámenes de Trazo, Licencias y padrón de peritos de Zapopan.
+                    </p>
+
+                    <!-- Core Attributes Breakdown -->
+                    <div class="space-y-3 text-sm">
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-amber-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-circle-question"></i> Por Qué (Justificación)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                El cliente que tramita Alineación o Licencia ya posee la tierra y pagó derechos de tesorería (liquidez demostrada). Iniciará obra en los próximos 90 días con o sin nosotros.
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-sky-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-bullseye"></i> Finalidad (Objetivo)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Ganar la delantera a cualquier otra constructora en etapa embrionaria y absorber la cartera de gestores municipales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steps Checklist Dropdown / Accordion -->
+                <div class="mt-5 pt-4 border-t border-slate-800">
+                    <button onclick="toggleSteps('steps-1')" class="w-full flex items-center justify-between text-xs font-semibold text-slate-400 hover:text-amber-400 py-1 transition">
+                        <span><i class="fa-solid fa-diagram-project mr-1.5 text-amber-500"></i> Desglose de Ejecución (4 Pasos)</span>
+                        <i id="icon-steps-1" class="fa-solid fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div id="steps-1" class="hidden mt-3 space-y-2 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+                        <div class="flex gap-2">
+                            <span class="text-amber-400 font-bold">1.</span>
+                            <span>Descarga mensual del padrón de licencias y alineaciones en la gaceta de transparencia Zapopan.</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-amber-400 font-bold">2.</span>
+                            <span>Filtrado geográfico prioritario: La Cima, Valle Real, Solares, Capital Norte.</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-amber-400 font-bold">3.</span>
+                            <span>Identificación y localización del Perito o Gestor firmante (datos de registro público).</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-amber-400 font-bold">4.</span>
+                            <span>Oferta B2B: <strong class="text-amber-400">2% de comisión</strong> sobre contrato firmado o centralización total de trámites de DOS UNO con su despacho.</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ACCIÓN 2 -->
+            <article class="glass-panel rounded-2xl p-6 border border-slate-800 hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-xl group-hover:scale-105 transition">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <span class="text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded bg-slate-800 text-sky-400 border border-slate-700">
+                            ACCIÓN 2 · Rastro Bancario
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition mb-2">
+                        Alianzas con Células Hipotecarias Master
+                    </h3>
+                    
+                    <p class="text-xs font-medium text-slate-400 mb-4">
+                        Acuerdos de reciprocidad con franquicias líderes de crédito (SOC, Creditaria, TOI).
+                    </p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-amber-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-circle-question"></i> Por Qué (Justificación)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                El banco exige proyecto ejecutivo y paramétrico formal para liberar fondos. El cliente tiene crédito autorizado y urgencia de iniciar (el banco cobra intereses), pero el broker carece de un constructor ágil.
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-sky-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-bullseye"></i> Finalidad (Objetivo)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Convertir a las oficinas hipotecarias más grandes de Zapopan en nuestra fuerza comercial externa a costo fijo cero.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-slate-800">
+                    <button onclick="toggleSteps('steps-2')" class="w-full flex items-center justify-between text-xs font-semibold text-slate-400 hover:text-amber-400 py-1 transition">
+                        <span><i class="fa-solid fa-diagram-project mr-1.5 text-sky-400"></i> Desglose de Ejecución (4 Pasos)</span>
+                        <i id="icon-steps-2" class="fa-solid fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div id="steps-2" class="hidden mt-3 space-y-2 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+                        <div class="flex gap-2">
+                            <span class="text-sky-400 font-bold">1.</span>
+                            <span>Citas directas con Directores de Franquicia SOC, Creditaria y TOI (Puerta de Hierro, Providencia, Zona Real).</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-sky-400 font-bold">2.</span>
+                            <span>Gancho de apertura: canalización exclusiva a su mesa de nuestros clientes que requieran financiamiento.</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-sky-400 font-bold">3.</span>
+                            <span>Convenio de reciprocidad: al aprobar una línea de construcción sin constructor, DOS UNO entra como opción preferente con valor llave en mano de $18,500/m².</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-sky-400 font-bold">4.</span>
+                            <span>SLA de <strong class="text-sky-400">48 horas hábiles</strong> para entregar el presupuesto paramétrico bancario oficial.</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ACCIÓN 3 -->
+            <article class="glass-panel rounded-2xl p-6 border border-slate-800 hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl group-hover:scale-105 transition">
+                            <i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+                        <span class="text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded bg-slate-800 text-emerald-400 border border-slate-700">
+                            ACCIÓN 3 · Rastro Condominal
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition mb-2">
+                        Activación Condominal y Micro-Patrocinios
+                    </h3>
+                    
+                    <p class="text-xs font-medium text-slate-400 mb-4">
+                        Penetración en las apps y administraciones de cotos cerrados (Área Cuadrada, SEC).
+                    </p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-amber-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-circle-question"></i> Por Qué (Justificación)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                El dueño de un lote baldío paga mantenimiento mensual. Antes de construir, solicita a la administración el Reglamento Interno y restricciones de fachada. La administración sabe con nombre y lote quiénes construirán.
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-sky-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-bullseye"></i> Finalidad (Objetivo)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Superar los filtros de seguridad física e instalar la marca DOS UNO dentro del ecosistema digital cotidiano del propietario.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-slate-800">
+                    <button onclick="toggleSteps('steps-3')" class="w-full flex items-center justify-between text-xs font-semibold text-slate-400 hover:text-amber-400 py-1 transition">
+                        <span><i class="fa-solid fa-diagram-project mr-1.5 text-emerald-400"></i> Desglose de Ejecución (3 Pasos)</span>
+                        <i id="icon-steps-3" class="fa-solid fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div id="steps-3" class="hidden mt-3 space-y-2 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+                        <div class="flex gap-2">
+                            <span class="text-emerald-400 font-bold">1.</span>
+                            <span>Ruta de campo en cotos consolidados (Capital Norte, Solares, La Cima) para contactar a firmas administradoras (Área Cuadrada, SEC).</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-emerald-400 font-bold">2.</span>
+                            <span>Alta formal como "Proveedor Certificado": garantía de respeto a reglamentos, horarios y limpieza que alivia quejas a colonos.</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-emerald-400 font-bold">3.</span>
+                            <span>Micro-patrocinio publicitario en apps de colonos (Habitify, Colonos) y newsletters con banner de precio cerrado a $18,500/m².</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ACCIÓN 4 -->
+            <article class="glass-panel rounded-2xl p-6 border border-slate-800 hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl group-hover:scale-105 transition">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <span class="text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded bg-slate-800 text-purple-400 border border-slate-700">
+                            ACCIÓN 4 · Canal Inversionista
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition mb-2">
+                        Célula de Inversión "Flip & Sell"
+                    </h3>
+                    
+                    <p class="text-xs font-medium text-slate-400 mb-4">
+                        Estructuración de producto patrimonial llave en mano con brokers AMPI y KW / C21.
+                    </p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-amber-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-circle-question"></i> Por Qué (Justificación)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                El inversionista patrimonial no busca habitar, sino superar el rendimiento bancario/CETES con bajo riesgo. Al entregarle el modelo resuelto (tierra + costo fijo + salida proyectada), desembolsa de contado.
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-sky-400 uppercase tracking-wider mb-1">
+                                <i class="fa-solid fa-bullseye"></i> Finalidad (Objetivo)
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Generar volumen de obra por bloque apalancado en capital de terceros, garantizando absorción continua y presencia física de marca.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-slate-800">
+                    <button onclick="toggleSteps('steps-4')" class="w-full flex items-center justify-between text-xs font-semibold text-slate-400 hover:text-amber-400 py-1 transition">
+                        <span><i class="fa-solid fa-diagram-project mr-1.5 text-purple-400"></i> Desglose de Ejecución (3 Pasos)</span>
+                        <i id="icon-steps-4" class="fa-solid fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div id="steps-4" class="hidden mt-3 space-y-2 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+                        <div class="flex gap-2">
+                            <span class="text-purple-400 font-bold">1.</span>
+                            <span>Monitoreo en AMPI y Bolsa Inmobiliaria para cazar terrenos en preventa/remate de oportunidad ($1.5 a $2.5 MDP).</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-purple-400 font-bold">2.</span>
+                            <span>Corrida financiera paramétrica estándar: Terreno + Obra DOS UNO ($18,500/m²) + Notaría vs. Precio de salida del coto.</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-purple-400 font-bold">3.</span>
+                            <span>Presentación del paquete terminado a directores de agencias (Keller Williams, Century 21) para colocación preferencial con sus inversionistas de chequera activa.</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- DETAILED OPERATIVE TABBED VIEW (Initially hidden, switchable) -->
+        <div id="detailedView" class="hidden glass-panel rounded-2xl p-6 lg:p-8 border border-slate-800">
+            <!-- Action Selector Pills -->
+            <div class="flex flex-wrap gap-2 border-b border-slate-800 pb-4 mb-6" id="tabButtons">
+                <button onclick="selectDetailedTab(1)" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 flex items-center gap-2 transition" data-tab="1">
+                    <i class="fa-solid fa-landmark"></i> 1. Ventanilla Municipal
+                </button>
+                <button onclick="selectDetailedTab(2)" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-2 transition" data-tab="2">
+                    <i class="fa-solid fa-credit-card"></i> 2. Células Hipotecarias
+                </button>
+                <button onclick="selectDetailedTab(3)" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-2 transition" data-tab="3">
+                    <i class="fa-solid fa-house-chimney-window"></i> 3. Cotos & Apps
+                </button>
+                <button onclick="selectDetailedTab(4)" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-2 transition" data-tab="4">
+                    <i class="fa-solid fa-arrow-trend-up"></i> 4. Flip & Sell
+                </button>
+            </div>
+
+            <!-- Tab Content Area -->
+            <div id="tabContent" class="space-y-6">
+                <!-- Content dynamically populated via JS -->
+            </div>
+        </div>
+
+        <!-- INTERACTIVE PARAMETRIC CALCULATOR (FLIP & SELL / RESIDENTIAL OBRA) -->
+        <section class="glass-panel rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-800">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-xs font-bold text-amber-500 uppercase tracking-wider flex items-center gap-1.5 mb-1">
+                        <i class="fa-solid fa-calculator"></i> Simulador Financiero en Vivo
+                    </span>
+                    <h2 class="text-2xl font-bold text-white font-display">Matriz Paramétrica de Obra & Flip</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Proyección instantánea de volumen de contrato bajo el esquema DOS UNO a $18,500/m².</p>
+                </div>
+                <div class="text-xs bg-slate-900 border border-slate-700/80 px-3.5 py-2 rounded-xl text-slate-300">
+                    <span class="text-amber-400 font-semibold">Parámetro Base:</span> $18,500 MXN / m² C.F.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Controls Column -->
+                <div class="lg:col-span-5 space-y-6 bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                    <!-- Surface Slider -->
+                    <div>
+                        <div class="flex justify-between items-center text-sm mb-2">
+                            <label for="surfaceInput" class="text-slate-300 font-medium">Metros Cuadrados Construcción:</label>
+                            <span id="surfaceDisplay" class="font-display font-bold text-amber-400 text-lg">220 m²</span>
+                        </div>
+                        <input type="range" id="surfaceInput" min="140" max="500" step="10" value="220" oninput="calculateProject()"
+                            class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                            <span>140 m² (Compacta)</span>
+                            <span>220 m² (Estándar Coto)</span>
+                            <span>500 m² (Residencia)</span>
+                        </div>
+                    </div>
+
+                    <!-- Land Cost Slider (For Flip Analysis) -->
+                    <div>
+                        <div class="flex justify-between items-center text-sm mb-2">
+                            <label for="landCostInput" class="text-slate-300 font-medium">Costo de Terreno Oportunidad:</label>
+                            <span id="landCostDisplay" class="font-display font-bold text-sky-400 text-lg">$1,850,000</span>
+                        </div>
+                        <input type="range" id="landCostInput" min="1200000" max="4000000" step="50000" value="1850000" oninput="calculateProject()"
+                            class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                            <span>$1.2 MDP</span>
+                            <span>$2.5 MDP</span>
+                            <span>$4.0 MDP</span>
+                        </div>
+                    </div>
+
+                    <!-- Broker Commission Slider -->
+                    <div>
+                        <div class="flex justify-between items-center text-sm mb-2">
+                            <label class="text-slate-300 font-medium">Comisión Gestor/Perito (Acción 1):</label>
+                            <span class="font-mono text-emerald-400 font-bold">2.0% Fijo</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400">Calculado sobre el contrato neto de obra de DOS UNO como incentivo de intercepción en ventanilla.</p>
+                    </div>
+                </div>
+
+                <!-- Results Display Card -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/90 border border-amber-500/30 relative overflow-hidden">
+                        <div class="text-xs uppercase tracking-wider text-slate-400 font-medium">Valor Contrato Obra DOS UNO</div>
+                        <div id="contractValue" class="text-2xl sm:text-3xl font-display font-extrabold text-amber-400 mt-2">$4,070,000</div>
+                        <p class="text-xs text-slate-400 mt-1">Base: Superficie × $18,500 MXN</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800">
+                        <div class="text-xs uppercase tracking-wider text-slate-400 font-medium">Comisión Perito / Gestor (2%)</div>
+                        <div id="commissionValue" class="text-2xl sm:text-3xl font-display font-bold text-emerald-400 mt-2">$81,400</div>
+                        <p class="text-xs text-slate-400 mt-1">Pagado contra firma de obra asegurada</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800">
+                        <div class="text-xs uppercase tracking-wider text-slate-400 font-medium">Inversión Consolidada Flip</div>
+                        <div id="totalInvestment" class="text-2xl sm:text-3xl font-display font-bold text-white mt-2">$6,160,000</div>
+                        <p class="text-xs text-slate-400 mt-1">Terreno + Obra + 4% Gastos Notariales</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800">
+                        <div class="text-xs uppercase tracking-wider text-slate-400 font-medium">Venta Mercado Estimada Zapopan</div>
+                        <div id="estimatedSale" class="text-2xl sm:text-3xl font-display font-bold text-sky-400 mt-2">$7,700,000</div>
+                        <div class="flex items-center justify-between text-xs text-emerald-400 mt-1 font-medium">
+                            <span>Retorno Proyecto (ROI):</span>
+                            <span id="roiValue" class="font-bold text-sm">25.0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROADMAP & BOARD AGREEMENT CHECKLIST -->
+        <section class="glass-panel rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-800 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+                <div>
+                    <span class="text-xs font-bold text-amber-500 uppercase tracking-wider">Hoja de Ruta Inmediata</span>
+                    <h2 class="text-2xl font-bold text-white font-display">Acuerdos y Despliegue de la Junta Directiva</h2>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-slate-400">Progreso de Aprobación:</span>
+                    <span id="progressText" class="text-xs font-bold text-amber-400 font-mono">2 / 4 Aprobados</span>
+                </div>
+            </div>
+
+            <!-- Phased Implementation Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Fase 1: Arranque Inmediato -->
+                <div class="p-5 rounded-2xl bg-slate-900/90 border-l-4 border-amber-500 border border-slate-800">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-wider bg-amber-500/10 px-2.5 py-0.5 rounded">
+                            Lunes Próximo (Día 1 a 15)
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Fase Prioritaria</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Despliegue Células 1 & 2 (Licencias + Brokers)</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Extracción del primer lote de licencias de transparencia Zapopan y calendarización de 10 citas corporativas con directores de SOC, Creditaria y TOI en Zona Real y Providencia.
+                    </p>
+                    <div class="text-[11px] text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-stopwatch text-amber-400"></i>
+                        <span>Medición de tasa de bateo a los primeros 14 días.</span>
+                    </div>
+                </div>
+
+                <!-- Fase 2: Expansión Territorial -->
+                <div class="p-5 rounded-2xl bg-slate-900/90 border-l-4 border-sky-500 border border-slate-800">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold text-sky-400 uppercase tracking-wider bg-sky-500/10 px-2.5 py-0.5 rounded">
+                            Día 16 a 45
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Fase de Escalamiento</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Penetración Cotos & Modelado Flip</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Activación de micro-patrocinios con administradoras condominales (Área Cuadrada, SEC) y armado del primer expediente "Flip & Sell" con KW para lote de remate en Capital Norte.
+                    </p>
+                    <div class="text-[11px] text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-bullhorn text-sky-400"></i>
+                        <span>Presupuesto publicitario controlado por coto.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Board Voting Checklist -->
+            <div class="space-y-4 pt-4">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300">Resoluciones Sometidas a Votación:</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="agreementsChecklist">
+                    <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition select-none">
+                        <input type="checkbox" checked onchange="updateAgreements()" class="mt-1 w-4 h-4 rounded text-amber-500 focus:ring-amber-500 bg-slate-800 border-slate-700 agreement-chk">
+                        <div class="text-xs">
+                            <strong class="text-white block font-medium">1. Autorización de Fase 1 Inmediata</strong>
+                            <span class="text-slate-400">Extracción de gaceta de transparencia Zapopan y ronda con directores SOC/Creditaria.</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition select-none">
+                        <input type="checkbox" checked onchange="updateAgreements()" class="mt-1 w-4 h-4 rounded text-amber-500 focus:ring-amber-500 bg-slate-800 border-slate-700 agreement-chk">
+                        <div class="text-xs">
+                            <strong class="text-white block font-medium">2. Comisión de Éxito a Peritos (2%)</strong>
+                            <span class="text-slate-400">Aprobación de partida comercial de hasta 2% sobre contratos cerrados por referencia técnica.</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition select-none">
+                        <input type="checkbox" onchange="updateAgreements()" class="mt-1 w-4 h-4 rounded text-amber-500 focus:ring-amber-500 bg-slate-800 border-slate-700 agreement-chk">
+                        <div class="text-xs">
+                            <strong class="text-white block font-medium">3. Fondo de Micro-Patrocinios en Cotos</strong>
+                            <span class="text-slate-400">Bolsa piloto de $15,000 MXN mensuales para pautas en apps condominales (Habitify/Colonos).</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition select-none">
+                        <input type="checkbox" onchange="updateAgreements()" class="mt-1 w-4 h-4 rounded text-amber-500 focus:ring-amber-500 bg-slate-800 border-slate-700 agreement-chk">
+                        <div class="text-xs">
+                            <strong class="text-white block font-medium">4. Habilitación de Dossier "Flip & Sell"</strong>
+                            <span class="text-slate-400">Autorización para presentar corridas firmadas por DOS UNO ante directivos de Century 21 y KW.</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Conclusion Callout -->
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-amber-950/30 via-slate-900 to-slate-900 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="space-y-1 text-center sm:text-left">
+                    <h4 class="text-base font-bold text-white">Declaración Final de Ejecución</h4>
+                    <p class="text-xs text-slate-300 max-w-2xl">
+                        "DOS UNO pasa de una postura reactiva en redes sociales a una ofensiva corporativa y territorial de alta precisión en Zapopan. Estamos listos para comenzar este lunes."
+                    </p>
+                </div>
+                <button onclick="signProposal()" id="approveBtn" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20 whitespace-nowrap">
+                    <i class="fa-solid fa-signature mr-1.5"></i> Ratificar Acuerdo
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 mt-12 py-6 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span>DOS UNO Arquitectura & Construcción © 2026. Todos los derechos reservados.</span>
+            <span class="text-slate-400 font-mono">ZAPOPAN_STRATEGY_v2.6_HIGH_INTENT</span>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Data Store for the 4 Strategic Actions
+        const strategicActions = [
+            {
+                id: 1,
+                title: "Intercepción en Ventanilla Municipal",
+                code: "ACCIÓN 1 · El Rastro Legal",
+                icon: "fa-landmark",
+                color: "amber",
+                why: "Todo propietario con capital real que planea construir en Zapopan deja un rastro obligatorio ante el Ayuntamiento antes de meter maquinaria. Al tramitar el Dictamen de Trazos o la Licencia, el cliente demuestra propiedad de la tierra y pago de derechos municipales (liquidez confirmada). Va a construir en los próximos 90 días.",
+                objective: "Captar al cliente en su etapa más temprana de planeación, ganándole la delantera a cualquier otra constructora de la ciudad y absorbiendo la cartera de clientes de los gestores locales.",
+                steps: [
+                    "Asignación al equipo de control de proyectos para descargar mensualmente el padrón de licencias y alineaciones de las gacetas de transparencia de Zapopan.",
+                    "Filtro por colonias clave de alta demanda: La Cima, Valle Real, Solares, Capital Norte.",
+                    "Ubicación del Perito o Gestor firmante del trámite mediante los datos públicos de registro.",
+                    "Contacto comercial ofreciendo 2% de comisión sobre el contrato de obra por cada cliente referido sin constructor, o centralizar con ellos todos los trámites futuros de DOS UNO para volumen de negocio."
+                ],
+                targetZone: "Dirección de Obras Públicas Zapopan / Colonias AAA",
+                sla: "72 horas post-publicación de gaceta"
+            },
+            {
+                id: 2,
+                title: "Alianzas con Células Hipotecarias Master",
+                code: "ACCIÓN 2 · El Rastro Bancario",
+                icon: "fa-credit-card",
+                color: "sky",
+                why: "Gran parte del segmento medio-alto financia vía créditos de 'Construcción' o 'Terreno + Construcción'. El banco exige por ley proyecto ejecutivo y paramétrico serio para liberar el dinero. El cliente con crédito autorizado tiene prisa por iniciar porque genera intereses, pero el broker no siempre cuenta con un constructor con respuesta veloz.",
+                objective: "Convertir a las oficinas de brokers hipotecarios más grandes de Zapopan en nuestra fuerza de ventas externa sin costo fijo recurrente.",
+                steps: [
+                    "Agendado de citas corporativas con Directores de Franquicia de SOC, Creditaria y TOI en Puerta de Hierro, Providencia y Zona Real.",
+                    "Apertura con propuesta de reciprocidad: enviarles a nuestros clientes que requieran financiamiento (generándoles comisión a ellos).",
+                    "Firma de acuerdo de reciprocidad: cuando les llegue un cliente con línea de construcción aprobada buscando constructor, colocar la carpeta de DOS UNO con precio cerrado de $18,500 m².",
+                    "Garantía de entrega del presupuesto paramétrico bancario oficial en un lapso récord de 48 horas para agilizar la liberación de fondos."
+                ],
+                targetZone: "Franquicias SOC / TOI / Creditaria en Puerta de Hierro & Zona Real",
+                sla: "48 Horas Presupuesto Paramétrico"
+            },
+            {
+                id: 3,
+                title: "Activación Condominal y Micro-Patrocinios",
+                code: "ACCIÓN 3 · El Rastro Condominal",
+                icon: "fa-house-chimney-window",
+                color: "emerald",
+                why: "El comprador de un terreno en un coto privado ya paga mantenimiento mensual y, antes de construir, pide el Reglamento Interno y restricciones a la administración. La administración sabe exactamente cuáles 5 o 10 dueños de baldíos están solicitando lineamientos cada mes.",
+                objective: "Posicionar la marca DOS UNO directamente en el ecosistema diario del propietario del terreno, rompiendo la barrera de las casetas de seguridad mediante un canal institucional.",
+                steps: [
+                    "Ruta de campo en cotos de Zapopan Norte (Capital Norte, Solares, La Cima) para obtener contactos de empresas administradoras (Área Cuadrada, SEC).",
+                    "Propuesta para registrarse como 'Proveedores Certificados' respetuosos de reglamentos, horarios y limpieza para disminuir fricciones vecinales.",
+                    "Negociación de micro-patrocinios publicitarios en aplicaciones digitales de cotos (Habitify, Colonos) y boletines impresos/digitales con el banner del precio congelado de $18,500 m²."
+                ],
+                targetZone: "Administradoras Área Cuadrada, SEC y Cotos con cuotas al corriente",
+                sla: "Impacto directo en canal habitacional"
+            },
+            {
+                id: 4,
+                title: "Célula de Inversión 'Flip & Sell'",
+                code: "ACCIÓN 4 · El Canal Inversionista",
+                icon: "fa-arrow-trend-up",
+                color: "purple",
+                why: "Existe un perfil patrimonial que busca negocios para superar CETES o cuentas de inversión con bajo riesgo. Si DOS UNO le presenta un modelo empaquetado (diseño, construcción a costo fijo de $18,500/m² y precio estimado de reventa con utilidad), invierte con liquidez de contado inmediata.",
+                objective: "Generar volumen de obra para DOS UNO mediante capital de terceros, asegurando utilidades por construcción y acelerando posicionamiento en cotos premium.",
+                steps: [
+                    "Infiltración en grupos cerrados de brokers inmobiliarios (AMPI, Bolsa Inmobiliaria de Guadalajara) para pescar terrenos en preventa, aportación o remate ($1.5 a $2.5 MDP).",
+                    "Armado de corrida financiera paramétrica estándar: Terreno + Obra DOS UNO ($18,500/m²) + Gastos notariales vs. Precio de salida del coto.",
+                    "Presentación de portafolios a directores de agencias líderes (Keller Williams, Century 21) para colocación preferencial con sus carteras de inversionistas."
+                ],
+                targetZone: "AMPI Guadalajara, Redes Keller Williams & Century 21",
+                sla: "Modelado de rentabilidad en 72h"
+            }
+        ];
+
+        // Toggle Accordion in Grid View
+        function toggleSteps(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                el.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Switch View between Executive Grid and Detailed Operative Tab View
+        function switchView(mode) {
+            const grid = document.getElementById('actionsGrid');
+            const detailed = document.getElementById('detailedView');
+            const gridBtn = document.getElementById('viewGridBtn');
+            const detailedBtn = document.getElementById('viewDetailedBtn');
+
+            if (mode === 'grid') {
+                grid.classList.remove('hidden');
+                detailed.classList.add('hidden');
+                gridBtn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition";
+                detailedBtn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition";
+            } else {
+                grid.classList.add('hidden');
+                detailed.classList.remove('hidden');
+                detailedBtn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition";
+                gridBtn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition";
+                selectDetailedTab(1);
+            }
+        }
+
+        // Render detailed single action tab
+        function selectDetailedTab(actionId) {
+            const action = strategicActions.find(a => a.id === actionId);
+            if (!action) return;
+
+            // Highlight button
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                const id = parseInt(btn.getAttribute('data-tab'));
+                if (id === actionId) {
+                    btn.className = "tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 flex items-center gap-2 transition";
+                } else {
+                    btn.className = "tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-2 transition";
+                }
+            });
+
+            // Populate content
+            const content = document.getElementById('tabContent');
+            content.innerHTML = `
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                    <div>
+                        <span class="text-xs font-bold text-amber-500 tracking-wider uppercase">${action.code}</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">${action.title}</h3>
+                    </div>
+                    <div class="flex items-center gap-3 text-xs">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300">
+                            <i class="fa-solid fa-crosshairs text-amber-400 mr-1.5"></i> Target: <strong class="text-white">${action.targetZone}</strong>
+                        </span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300">
+                            <i class="fa-solid fa-clock text-sky-400 mr-1.5"></i> SLA: <strong class="text-white">${action.sla}</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+                        <div class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-circle-question"></i> Diagnóstico & Justificación (Por Qué)
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">${action.why}</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+                        <div class="text-xs font-bold text-sky-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye"></i> Meta Estratégica (Finalidad)
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">${action.objective}</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-4">
+                    <div class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-list-ol text-amber-500"></i> Plan Táctico de Implementación Paso a Paso:
+                    </div>
+                    <div class="grid grid-cols-1 gap-3">
+                        ${action.steps.map((st, idx) => `
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/90 border border-slate-800/80">
+                                <span class="w-6 h-6 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                                    ${idx + 1}
+                                </span>
+                                <span class="text-xs sm:text-sm text-slate-200 leading-relaxed">${st}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Live Parametric Calculator Logic
+        function calculateProject() {
+            const surface = parseInt(document.getElementById('surfaceInput').value);
+            const landCost = parseInt(document.getElementById('landCostInput').value);
+            
+            document.getElementById('surfaceDisplay').innerText = `${surface} m²`;
+            document.getElementById('landCostDisplay').innerText = `$${landCost.toLocaleString('es-MX')}`;
+
+            const baseCostPerM2 = 18500;
+            const obraTotal = surface * baseCostPerM2;
+            const comisionPerito = Math.round(obraTotal * 0.02);
+            const notariaYCostos = Math.round(landCost * 0.04);
+            const inversionTotal = landCost + obraTotal + notariaYCostos;
+            
+            // Estimated sale value in Zapopan Coto (Approx 1.25x markup of consolidated cost for a new turnkey property)
+            const ventaEstimada = Math.round(inversionTotal * 1.25);
+            const roi = (((ventaEstimada - inversionTotal) / inversionTotal) * 100).toFixed(1);
+
+            document.getElementById('contractValue').innerText = `$${obraTotal.toLocaleString('es-MX')}`;
+            document.getElementById('commissionValue').innerText = `$${comisionPerito.toLocaleString('es-MX')}`;
+            document.getElementById('totalInvestment').innerText = `$${inversionTotal.toLocaleString('es-MX')}`;
+            document.getElementById('estimatedSale').innerText = `$${ventaEstimada.toLocaleString('es-MX')}`;
+            document.getElementById('roiValue').innerText = `${roi}%`;
+        }
+
+        // Board Checklist Counter
+        function updateAgreements() {
+            const checkboxes = document.querySelectorAll('.agreement-chk');
+            const total = checkboxes.length;
+            let approved = 0;
+            checkboxes.forEach(ch => {
+                if (ch.checked) approved++;
+            });
+            document.getElementById('progressText').innerText = `${approved} / ${total} Aprobados`;
+        }
+
+        // Fullscreen presentation toggle
+        function togglePresentationMode() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Ratify agreement button feedback
+        function signProposal() {
+            const btn = document.getElementById('approveBtn');
+            btn.innerHTML = `<i class="fa-solid fa-check-double mr-1.5"></i> ¡Acuerdo Ratificado!`;
+            btn.classList.remove('bg-amber-500', 'hover:bg-amber-400');
+            btn.classList.add('bg-emerald-600', 'text-white');
+            setTimeout(() => {
+                btn.innerHTML = `<i class="fa-solid fa-signature mr-1.5"></i> Ratificar Acuerdo`;
+                btn.classList.remove('bg-emerald-600', 'text-white');
+                btn.classList.add('bg-amber-500', 'text-slate-950');
+            }, 3000);
+        }
+
+        // Initialization
+        window.onload = function() {
+            calculateProject();
+            updateAgreements();
+        }
+    </script>
+</body>
+</html>
